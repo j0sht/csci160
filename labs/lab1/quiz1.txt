@@ -1,0 +1,19 @@
+// Joshua Tate
+//
+// Pre-lab quiz: quiz1
+
+1)
+    scanf("%d", &a);
+    scanf("%f", &f);
+    scanf("%lf", &x);
+
+2)
+    printf("%10d", a);
+    printf("%10f", f);
+    printf("%10lf", x);
+
+3)
+    printf("%8.3f", f);
+
+4)
+    x = pow(f, a);
