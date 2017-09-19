@@ -1,5 +1,5 @@
 // Joshua Tate
-// Lab 1
+// Lab 1 Exercise
 //
 // This program computes and displays square root of a user entered value
 #include <cstdio>
@@ -13,7 +13,7 @@ int main()
     printf("will then compute and display its square root.\n");
 
     // Declare a variable to hold user's input data
-    // as well as the calculated result, use double for each
+    // and one to hold the calculated result, each of type double
     double userValue, result;
 
     // Prompt the user for a numeric value, read it into userValue
