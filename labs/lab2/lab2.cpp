@@ -18,29 +18,28 @@ void welcome();
 //   (no error checking currently performed)
 int getNumDays();
 
-// prompt the user to enter the number of kilometers
+// prompt the user to enter the number of kilometres
 //   read and return their response
 float getNumKms();
 
-// calculate the cost given days and kilometers
+// calculate the cost given days and kilometres
 //   return the result
 float calculatePrice(int days, float kms);
 
-// display the cost given the days, kilometers and price
+// display the cost given the days, kilometres and price
 void displaySummary(int days, float kms, float price);
 
 int main()
 {
-    // declare variables for the number of days, kilometers,
+    // declare variables for the number of days, kilometres,
     //   and final price
     int numberOfDays;
-    float numberOfKms;
-    float price;
+    float numberOfKms, price;
     // display the welcome/intro message
     welcome();
     // get and store the number of days
     numberOfDays = getNumDays();
-    // get and store the number of kilometers
+    // get and store the number of kilometres
     numberOfKms = getNumKms();
     // calculate and store the price
     price = calculatePrice(numberOfDays, numberOfKms);
@@ -73,9 +72,9 @@ int getNumDays()
 
 float getNumKms()
 {
-    // kms will hold user entered number of kms
+    // kms will hold user entered number of kilometres
     float kms;
-    // prompt user for number of kms, store in kms
+    // prompt user for number of kilometres, store in kms
     printf("Please enter the number of kilometres driven (e.g. 172.4): ");
     scanf("%f", &kms);
     // return kms
@@ -84,9 +83,9 @@ float getNumKms()
 
 float calculatePrice(int days, float kms)
 {
-    // dayCost holds cost per days given
+    // dayCost holds cost per given days
     float dayCost = days * CostPerDay;
-    // kmsCost hold cost per kms given
+    // kmsCost hold cost per given kilometres
     float kmsCost = kms * CostPerKm;
     // return the sum of dayCost and kmsCost
     return dayCost + kmsCost;
