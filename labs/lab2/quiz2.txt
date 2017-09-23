@@ -1,0 +1,12 @@
+// Joshua Tate
+//
+// Pre-lab quiz: quiz2
+
+1)
+    double fahr2cels(double fahr);
+
+2)
+    double boilpt = fahr2cels(212.0);
+
+3)
+    12.0 (stores floating point division in an int - truncates result)
