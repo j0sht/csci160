@@ -9,4 +9,7 @@
     double boilpt = fahr2cels(212.0);
 
 3)
-    12.0 (stores floating point division in an int - truncates result)
+    returned value: 12.0
+    - stores floating point division in an int variable,
+      which truncates result to 12
+    - int variable is then returned as a double, the result is 12.0
