@@ -3,7 +3,7 @@
 //
 // This program asks the user to enter 2 integers,
 //  then determines how many times the second goes
-//  into the first and what the remainder is aftewords.
+//  into the first and what the remainder is afterwords.
 //
 // The program ensures that the user enters two integers,
 //  and that the denominator is not 0.
@@ -18,29 +18,28 @@ void welcome();
 
 // bool getTwoInts(int &numerator, int &denominator)
 //  asks the user for two integer values.
-// The numbers are then stored in numerator and denominator,
-//  respectively.
+// The numbers are then stored in numerator and denominator, respectively.
 // If the user does not enter an integer for one or both,
 //  the function returns false, otherwise it returns true.
 bool getTwoInts(int &numerator, int &denominator);
 
 // void printDivision(int numerator, int denominator)
-//  prints the division of numerator/denominator, and
+//  prints the division of the numerator and denominator, and
 //  the remainder of the division.
 // If the denominator is equal to 0, printDivision
 //  will not perform the division and let the user know
-//  that they cannot divide by 0.
+//  that the program cannot divide by 0.
 void printDivision(int numerator, int denominator);
 
 /* MAIN */
 int main() {
-    // Display welcome message to user, and explain purpose of program.
+    // Display welcome message to user, and explain the program's purpose.
     welcome();
-    // Create to integer variables to represent the numerator and
+    // Create two integer variables to represent the numerator and
     //  denominator that user will enter.
     int numerator, denominator;
-    // Get numerator and denominator from the user, store in a bool
-    //  variable to check if input was valid.
+    // Get numerator and denominator from the user, create bool
+    //  variable to check if input was valid as indicated by the function.
     bool twoInts = getTwoInts(numerator, denominator);
     if (twoInts) {
 	// If user input is valid, print the result of the division
@@ -89,7 +88,7 @@ void printDivision(int numerator, int denominator) {
     // Create variable to hold on to result of remainder from dividing
     //  the numerator by the denominator.
     int remainder = numerator % denominator;
-    // Display message to user describing result of division and remainder
+    // Display message to user describing result of division and remainder.
     printf("%d goes into %d a total number of %d times, ",
 	   denominator, numerator, division);
     printf("with a remainder of %d.\n", remainder);
