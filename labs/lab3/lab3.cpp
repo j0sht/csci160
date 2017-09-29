@@ -70,15 +70,8 @@ bool getTwoInts(int &numerator, int &denominator) {
     printf("Please enter the numerator and denominator as integers, ");
     printf("e.g. 23 5\n");
     // Store the values in numerator and denominator.
-    // Hold on to return value of scanf indicating successful scan.
-    int scanfVal = scanf("%d %d", &numerator, &denominator);
-    if (scanfVal) {
-	// If the scan was successful, return true.
-	return true;
-    } else {
-	// If the scan was unsuccessful, return false.
-	return false;
-    }
+    // Return the result of scanf, indicating successful/unsuccessful scan.
+    return scanf("%d %d", &numerator, &denominator);
 }
 
 void printDivision(int numerator, int denominator) {
