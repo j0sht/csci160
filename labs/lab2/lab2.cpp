@@ -1,7 +1,7 @@
 // Joshua Tate
 // Lab 2 Exercise
 //
-// This program calculate car rental price, given user input and
+// This program calculates a car rental's price, given user input and
 //   set rates on cost per day and cost per kilometre.
 #include <cstdio>
 
