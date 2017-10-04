@@ -69,8 +69,10 @@ bool getTwoInts(int &numerator, int &denominator) {
     printf("Please enter the numerator and denominator as integers, ");
     printf("e.g. 23 5\n");
     // Store the values in numerator and denominator.
-    // Return the result of scanf, indicating successful/unsuccessful scan.
-    return scanf("%d %d", &numerator, &denominator);
+    // Return the result of comparing scanfs return value to 2,
+    //  if the scanf return value is not equal to 2 the function
+    //  will return false, otherwise true.
+    return scanf("%d %d", &numerator, &denominator) == 2;
 }
 
 void printDivision(int numerator, int denominator) {
