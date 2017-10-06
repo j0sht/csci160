@@ -1,0 +1,22 @@
+// Joshua Tate
+//
+// Pre-lab quiz: quiz4
+
+1)
+    f1: 3
+    f1: 2
+    f1: 1
+    f1: 0
+    f2: 0
+    f2: 1
+    f2: 2
+    f2: 3
+
+2)
+    In f1, each frame prints the value of newX before creating the next frame
+    in the recursive call. Because it is the last line in each frame, they
+    are simply popped off until reaching main. In f2, each frame adds another
+    before printing the value of newX in its frame, until the if check fails.
+    Once x == 0, the added frames begin to pop off the stack until reaching
+    main, printing the value of newX in each frame before popping off the 
+    stack.
