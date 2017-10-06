@@ -1,5 +1,5 @@
 // Joshua Tate
-// Lab 3 Exercise
+// Lab 4 Exercise
 //
 // This program asks the user to enter a number in the range 1..10
 // If the user enters an invalid value, the program will repeatedly ask
