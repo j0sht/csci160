@@ -50,7 +50,7 @@ float getInRange(float minVal, float maxVal) {
     int scanfVal = scanf("%f", &userVal);
     // Check if scanf did not successfully scan one float value
     if (!scanfVal) {
-	// If the user did not enter a valid number, tell them so
+	// Tell user they did not enter a valid number
 	printf("That was not a valid number, please try again\n");
 	// Clear the buffer of invalid input
 	scanf("%*s");
