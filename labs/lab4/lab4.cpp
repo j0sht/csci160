@@ -12,7 +12,7 @@ void welcome();
 
 // getInRange(float minVal, float maxVal) asks the user for a value in the
 //  range minVal..maxVal.
-// minVal represents the smalled valid value, and
+// minVal represents the smallest valid value, and
 // maxVal represents the largest valid value
 // getInRange will repeatedly prompt the user for a valid value until
 //  on is given.
@@ -48,6 +48,7 @@ float getInRange(float minVal, float maxVal) {
 	   minVal, maxVal);
     // Store scanf's return value in scanfVal to check for successful scan
     int scanfVal = scanf("%f", &userVal);
+    // Check if scanf did not successfully scan one float value
     if (!scanfVal) {
 	// If the user did not enter a valid number, tell them so
 	printf("That was not a valid number, please try again\n");
@@ -55,20 +56,20 @@ float getInRange(float minVal, float maxVal) {
 	scanf("%*s");
 	// Prompt the user again for a valid value
 	userVal = getInRange(minVal, maxVal);
-    } else {
-	if (userVal < minVal) {
-	    // If userVal is less than minVal, tell user the value is
-	    //  too small. Ask them to try again.
-	    printf("Error: the value %g is too small, please try again\n",
-		   userVal);
-	    userVal = getInRange(minVal, maxVal);
-	} else if (userVal > maxVal) {
-	    // If userVal is greater than maxVal, tell the user the value is
-	    //  too large. Ask them to try again.
-	    printf("Error: the value %g is too large, please try again\n",
-		   userVal);
-	    userVal = getInRange(minVal, maxVal);
-	}
+    }
+    // Check if the users input is less than the minimum value
+    if (userVal < minVal) {
+	// Tell user the value is too small. Ask them to try again.
+	printf("Error: the value %g is too small, please try again\n",
+	       userVal);
+	userVal = getInRange(minVal, maxVal);
+    }
+    // Check if the users input is greater than the maximum value
+    if (userVal > maxVal) {
+	// Tell the user the value is too large. Ask them to try again.
+	printf("Error: the value %g is too large, please try again\n",
+	       userVal);
+	userVal = getInRange(minVal, maxVal);
     }
     return userVal;
 }

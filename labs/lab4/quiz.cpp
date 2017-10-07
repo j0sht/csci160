@@ -17,6 +17,6 @@ void f2(int x) {
 }
 
 int main() {
-    f2(4);
     f1(4);
+    f2(4);
 }
