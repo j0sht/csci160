@@ -3,7 +3,7 @@
 //
 // This program asks the user to enter a number in the range
 //  3..15 (inclusive), then draws a square box made up of
-//  asteriks, of the size x * x, where x is the value the user entered.
+//  asterisks, of the size x * x, where x is the value the user entered.
 #include <cstdio>
 
 // MinVal represents the smallest accepted value in range of
@@ -26,7 +26,7 @@ void welcome();
 //  one is given.
 int getSizeInRange(int minVal, int maxVal);
 
-// drawBoxOfSize(int size) will draw a box made up of asteriks, with
+// drawBoxOfSize(int size) will draw a box made up of asterisks, with
 //  dimensions size * size
 void drawBoxOfSize(int size);
 
@@ -53,8 +53,8 @@ void welcome() {
 
 int getSizeInRange(int minVal, int maxVal) {
     // userVal represents the users input
-    // scanfResult represents the value returned by scanf, indicating
-    //  whether or not user entered proper data type.
+    // scanfResult represents the value returned by scanf, used to
+    //  indicate whether or not user entered proper data type.
     int userVal, scanfResult;
     // userInputIsValid is a boolean used to keep track of whether or
     //  not the user has entered valid input. Initial value is false
@@ -80,7 +80,7 @@ int getSizeInRange(int minVal, int maxVal) {
 	    // If user input is out of acceptable range, set
 	    //  userInputIsValid to false
 	    userInputIsValid = false;
-	    // Explain to user that the value they entered in not in the
+	    // Explain to user that the value they entered is not in the
 	    //  proper range, ask them to try again.
 	    printf("Sorry, %d is not in the range %d..%d, ",
 		   userVal, minVal, maxVal);
@@ -101,7 +101,7 @@ void drawBoxOfSize(int size) {
 	// The inner body for loop will draw the boxes width, drawing
 	//  a width equal to size
 	for (int j = 0; j < size; j++) {
-	    // Print asterik to represent unit of width
+	    // Print asterisk to represent unit of width
 	    printf("*");
 	}
 	// Print new line before drawing the next unit of height
