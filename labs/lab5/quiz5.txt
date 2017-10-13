@@ -1,0 +1,21 @@
+// Joshua Tate
+//
+// Pre-lab quiz: quiz5
+
+1.
+    bool userInputInvalid = true;
+    do {
+	printf("Please enter an integer: ");
+        int r = scanf("%d", &x);
+	userInputInvalid = (r == 0);
+	if (userInputInvalid) {
+	    scanf("%*s");
+	}
+    } while (userInputInvalid);
+
+2.
+    i = 13;
+    while (i <= j) {
+	printf("%d is no greater than %d\n", i, j);
+	i++;
+    }

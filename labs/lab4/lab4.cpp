@@ -6,6 +6,13 @@
 //  the user for an appropriate value until one is given.
 #include <cstdio>
 
+// MinVal represents the smallest accepted value in range
+//  of numbers for valid user input.
+const float MinVal = 1;
+// MaxVal represetns the largest accepted value in range
+//  of number for valid user input.
+const float MaxVal = 10;
+
 // welcome() displays an appropriate welcome message to the user,
 //  and explains the purpose of the program.
 void welcome();
@@ -22,8 +29,8 @@ float getInRange(float minVal, float maxVal);
 int main() {
     // display welcome message and explain purpose of program
     welcome();
-    // get value in range 1..10
-    float value = getInRange(1,10);
+    // get value in range MinVal..MaxVal
+    float value = getInRange(MinVal, MaxVal);
     // Thank user for proper input
     printf("Thank you for providing value %g\n", value);
     // Exit program
@@ -34,7 +41,8 @@ int main() {
 void welcome() {
     // Display welcome message and explain purpose and usage of program
     printf("In this program you will simply be asked to enter a number ");
-    printf("in the range 1..10.\nIf you supply an invalid value the ");
+    printf("in the range %g..%g.\nIf you supply an invalid value the ",
+	   MinVal, MaxVal);
     printf("program will tell you what you have done wrong,\n    ");
     printf("and ask you to try again.\nThis cycle will continue until you ");
     printf("provide a valid response.\n\n");

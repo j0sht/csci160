@@ -1,0 +1,8 @@
+13 is no greater than 20
+14 is no greater than 20
+15 is no greater than 20
+16 is no greater than 20
+17 is no greater than 20
+18 is no greater than 20
+19 is no greater than 20
+20 is no greater than 20
