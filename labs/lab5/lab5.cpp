@@ -96,7 +96,7 @@ int getSizeInRange(int minVal, int maxVal) {
 
 void drawBoxOfSize(int size) {
     // The outer body for loop will draw the boxes height, drawing
-    //  a length equal to size
+    //  a height equal to size
     for (int i = 0; i < size; i++) {
 	// The inner body for loop will draw the boxes width, drawing
 	//  a width equal to size
@@ -104,7 +104,7 @@ void drawBoxOfSize(int size) {
 	    // Print asterik to represent unit of width
 	    printf("*");
 	}
-	// Print new line before drawing the next unit of length
+	// Print new line before drawing the next unit of height
 	printf("\n");
     }
 }
