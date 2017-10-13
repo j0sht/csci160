@@ -3,15 +3,15 @@
 // Pre-lab quiz: quiz5
 
 1.
-    bool userInputInvalid = true;
+    bool userInputIsValid = false;
     do {
 	printf("Please enter an integer: ");
         int r = scanf("%d", &x);
-	userInputInvalid = (r == 0);
-	if (userInputInvalid) {
+	userInputIsInvalid = (r == 1);
+	if (!userInputIsValid) {
 	    scanf("%*s");
 	}
-    } while (userInputInvalid);
+    } while (!userInputIsValid);
 
 2.
     i = 13;
