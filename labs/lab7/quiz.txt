@@ -1,0 +1,18 @@
+// Joshua Tate
+//
+// Pre-lab quiz: quiz7
+
+1.
+    strncpy(strX, strY, 18);
+
+2.
+    char str[6] = "Quiz7";
+
+3.
+    There are 6 characters actually stored in the array declared in question 2.
+
+4.
+    char tmp[50];
+    strcpy(tmp, strX);
+    strcpy(strX, strY);
+    strcpy(strY, tmp);
