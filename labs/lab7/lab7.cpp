@@ -7,10 +7,14 @@
 //  counterparts.
 #include <cstdio>
 #include <cctype>  // provides toupper and tolower functions
+#include <cstring>
 
 // ExpectedArgCount represents the number of expected command line
 //  arguments
 const int ExpectedArgCount = 3;
+
+// MaxLen represents the maximum accepted string length
+const int MaxLen = 64;
 
 // Displays a welcome message explaining usage and purpose of program
 void welcome();
@@ -28,16 +32,24 @@ int main(int argc, char *argv[]) {
     // Check if three arguments were given
     if (argc == ExpectedArgCount) {
 	// Correct number of arguments were given
+	// Declare two character arrays to hold on to copies of
+	//  command line arguments
+	char firstWord[MaxLen];
+	char secondWord[MaxLen];
+	// Copy command line argument 2 and 3 into firstWord
+	//  and second word, respectively
+	strncpy(firstWord, argv[1], MaxLen);
+	strncpy(secondWord, argv[2], MaxLen);
 	// Print the original arguments
 	printf("Your original arguments were\n");
-	printf("   \"%s %s\"\n", argv[1], argv[2]);
+	printf("   \"%s %s\"\n", firstWord, secondWord);
 	// Convert first argument to upper case
-	convertToUpper(argv[1]);
+	convertToUpper(firstWord);
 	// Convert second argument to lower case
-	convertToLower(argv[2]);
+	convertToLower(secondWord);
 	// Print the converted arguments
 	printf("and the converted versions are\n");
-	printf("   \"%s %s\"\n", argv[1], argv[2]);
+	printf("   \"%s %s\"\n", firstWord, secondWord);
     } else {
 	// Incorrect number of arguments were given, print error
 	//  message and exit program.
