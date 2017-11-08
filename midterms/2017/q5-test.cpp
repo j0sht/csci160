@@ -2,7 +2,7 @@
 
 int Sr(int n) {
     int x, result;
-    if (n == 0) {
+    if (n <= 0) {
 	result = 0;
     } else {
 	x = Sr(n-1);
