@@ -20,8 +20,7 @@ int main() {
     scanf("%c", &entered);
     int max_rows = entered - 'A';
 
-    int row, spaces, chars;
-    for (row = 0, spaces = max_rows, chars = 'A';
+    for (int row = 0, spaces = max_rows, chars = 'A';
 	 row <= max_rows;
 	 row++, spaces--, chars++) {
 	for (int i = 0; i < spaces; i++)
