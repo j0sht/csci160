@@ -1,4 +1,4 @@
-/* 
+/*
  * Joshua Tate
  * Lab 8 Exercise
  *
@@ -68,7 +68,7 @@ bool copyFileByChars(const char *srcfile, const char *destfile) {
     // while the current character does not equal EOF
     while ((c = getc(fpin)) != EOF) {
 	// copy character to output
-    	putc(c, fpout);
+	fputc(c, fpout);
     }
     // close input and output files
     fclose(fpin);
