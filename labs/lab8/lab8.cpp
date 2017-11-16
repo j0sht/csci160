@@ -27,9 +27,9 @@ int main(int argc, char *argv[]) {
     // if they don't give both filenames,
     //  tell them how to run the program correctly
     if (argc != 3) {
-	printf("correct use is\n   %s infile outfile\n", argv[0]);
+	printf("correct use is\n\t%s infile outfile\n", argv[0]);
     } else if (copyFileByChars(argv[1], argv[2])) {
-	printf("Copied %s to %s\n", argv[1], argv[2]);
+	printf("Copied \"%s\" to \"%s\"\n", argv[1], argv[2]);
     } else {
 	printf("Unable to perform copy operations\n");
     }
@@ -49,14 +49,14 @@ bool copyFileByChars(const char *srcfile, const char *destfile) {
     fpin = fopen(srcfile, "r");
     if (fpin == NULL) { // opening input file failed
 	// print an error message and return false
-	printf("Could not open %s\n", srcfile);
+	printf("ERROR: Could not open \"%s\"\n", srcfile);
 	return false;
     }
     // attempt to open destfile for writing
     fpout = fopen(destfile, "w");
     if (fpout == NULL) { // opening destfile failed
 	// print an error message
-	printf("Could not open %s\n", destfile);
+	printf("ERROR: Could not open \"%s\"\n", destfile);
 	// close the input file
 	fclose(fpin);
 	// return false
