@@ -1,0 +1,21 @@
+// Joshua Tate
+//
+// Pre-lab quiz: quiz8
+
+1.
+    FILE *fp = fopen("quiz8.cpp", "r");
+    if (fp == NULL) {
+      printf("Error: Could not open %s\n", "quiz8.cpp");
+    } else {
+      fclose(fp);
+    }
+
+2.
+    fprintf(FPOUT, "%d", x);
+
+3.
+    fscanf(FPIN, "%d", &x);
+    if (!feof(FPIN)) {
+       printf("%d\n", x);
+    }
+
