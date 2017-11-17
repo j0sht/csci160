@@ -19,7 +19,7 @@ int main() {
     do {
 	scanf("%c", &c);
 	line[i] = c;
-    } while (c != '\n' && ++i < SIZE-1);
+    } while (c != '\n' && i++ < SIZE-1);
     line[i] = '\0';
 
     int len = strlen(line);
