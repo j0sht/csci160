@@ -19,17 +19,18 @@
 #include <cstdio>
 
 const int FIRST_FRIENDS = 5;
+const int DUNBAR = 150;
 
 int main() {
     int friends = FIRST_FRIENDS;
     int week;
-    for (week = 1; friends <= 150; week++) {
+    for (week = 1; friends <= DUNBAR; week++) {
 	friends -= week;
 	friends *= 2;
-	printf("Week %d: %3d\n", week, friends);
+	printf("After week %d: %3d\n", week, friends);
     }
     week--;
-    printf("\nIt took %d weeks for Professor Rabnud's social media "
+    printf("\nIt took ~%d weeks for Professor Rabnud's social media "
 	   "group to exceed Dunbar's number (approx. 150).\n", week);
 
     return 0;
