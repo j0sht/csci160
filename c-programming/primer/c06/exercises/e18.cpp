@@ -31,7 +31,8 @@ int main() {
     }
     week--;
     printf("\nIt took ~%d weeks for Professor Rabnud's social media "
-	   "group to exceed Dunbar's number (approx. 150).\n", week);
+	   "group to exceed Dunbar's number (approx. %d).\n",
+	   week, DUNBAR);
 
     return 0;
 }
