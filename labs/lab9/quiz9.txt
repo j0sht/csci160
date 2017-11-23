@@ -1,0 +1,18 @@
+// Joshua Tate
+//
+// Pre-lab quiz: quiz9
+
+1.
+    struct BuildingInfo {
+        char BldgName[16];
+	int BldgNumber;
+    };
+
+2.
+    BuildingInfo Bldg;
+
+3.
+    strncpy(Bldg.BldgName, "Physics", 16);
+    Bldg.BldNumber = 315;
+
+
