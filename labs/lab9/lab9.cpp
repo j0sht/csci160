@@ -81,6 +81,7 @@ int main() {
 }
 
 void welcome() {
+    // Display welcome message and explain program purpose
     printf("Welcome to TagRecorder\n\n");
     printf("This program allows you to enter data for a collection of\n"
 	   "dog tags, providing an id, phone number, and year for each.\n");
@@ -88,43 +89,58 @@ void welcome() {
 }
 
 long getLong(const char *prompt, long min, long max) {
-    long num;
-    int scanfVal;
-    bool inRange;
+    long num;     // user entered number
+    int scanfVal; // value returned by scanf
+    bool inRange; // boolean to determine if num is in proper range
 
+    // repeatedly prompt user until they enter a number in proper range
     do {
+	// display prompt
 	printf("%s (%ld-%ld): ", prompt, min, max);
+	// get number from user
 	scanfVal = scanf("%ld", &num);
+	// check if a number was entered
 	if (scanfVal != 1) {
+	    // tell user that was not a number
 	    printf("\nNot a number, try again.\n\n");
+	    // clear the input buffer of bad input
 	    scanf("%*s");
 	} else {
+	    // check if number is in proper range, store in inRange
 	    inRange = ((num >= min) && (num <= max));
 	    if (!inRange) {
+		// if number not in range, tell user to try again
 		printf("\n%ld is not in range %ld to %ld, try again.\n\n",
 		       num, min, max);
 	    }
 	}
     } while (scanfVal != 1 || !inRange);
 
+    // return user entered number
     return num;
 }
 
 void tagEntry(DogTag &dt) {
+    // get id and store in dt struct
     dt.id = getLong("Please enter a positive integer id for the tag",
 		    MinTagID, MaxTagID);
+    // get phone number and store it in dt struct
     dt.phone = getLong("Please enter the phone number, digits only",
 		       MinPhoneDigits, MaxPhoneDigits);
+    // get year and store it in dt struct
     dt.year = getLong("Please enter the year as an integer",
 		      MinYear, MaxYear);
 }
 
 void tagDisplay(DogTag dt) {
+    // display tag information
     printf("ID %ld, Phone %ld, Year %ld\n", dt.id, dt.phone, dt.year);
 }
 
 void fillTags(DogTag tags[], long size) {
+    // create dog tag struct to copy into array
     DogTag dt;
+    // get dog tag information for size number of dog tags
     for (long i = 0; i < size; i++) {
 	printf("\nProcessing tag %ld\n", i+1);
 	tags[i] = dt;
@@ -133,6 +149,7 @@ void fillTags(DogTag tags[], long size) {
 }
 
 void showTags(DogTag tags[], long size) {
+    // display dog tag information for size number of dog tags
     printf("\nThe supplied tag information is:\n");
     for (long i = 0; i < size; i++)
 	tagDisplay(tags[i]);
