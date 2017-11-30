@@ -1,0 +1,19 @@
+// Joshua Tate
+//
+// Pre-lab quiz: quiz10
+
+1.
+    int *intPtr = new int[23];
+
+2.
+    bool checkPtr(int *i) {
+        return (i != NULL);
+    }
+
+3.
+    void deleteArr(float* &f) {
+        if (f != NULL) {
+	    delete [] f;
+	    f = NULL;
+	}
+    }
