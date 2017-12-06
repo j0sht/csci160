@@ -17,7 +17,7 @@ int countChars(const char *filename) {
     if (fpin == NULL)
 	// didn't open, return -1
 	return -1;
-    
+
     int count = 0; // number of characters
     while (getc(fpin) != EOF)
 	count++;
