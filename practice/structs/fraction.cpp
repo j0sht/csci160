@@ -33,17 +33,20 @@ void setFraction(Fraction &f) {
 //    f1 and f2, and set appropriate values in the variable fields so that
 //    f1 represents 3/7 and f2 represents 112/113
 int main() {
-    Fraction f1, f2;
-
-    // 5. Re-write your main routine to call the function on f1 and f2
-    //    to set their values instead of the initialization you used
-    //    in step 2 above.
-    setFraction(f1);
-    setFraction(f2);
-
-    // 3
-    displayFraction(f1);
-    displayFraction(f2);
-
+    // 6. Create an array of 5 Fractions in your main routine, and use a
+    //    for loop to call your function from step 5 to initialize each
+    //    of them. Once all 5 array elements have been initialized, use
+    //    a second for loop to call your other function to print each
+    //    of them.
+    const int size = 5;
+    Fraction fractions[size];
+    for (int i = 0; i < size; i++) {
+	printf("For fraction #%d:\n", i+1);
+	setFraction(fractions[i]);
+    }
+    for (int i = 0; i < size; i++) {
+	printf("Fraction #%d: ", i+1);
+	displayFraction(fractions[i]);
+    }
     return 0;
 }
