@@ -9,14 +9,15 @@
  *  "Incorrect data entered" and ends.
  */
 #include <cstdio>
+#include <cmath>
 
 int main() {
-    int n1, n2;
+    double n1, n2;
     printf("Enter two numbers: ");
-    int val = scanf("%d %d", &n1, &n2);
+    int val = scanf("%lf %lf", &n1, &n2);
     if (val == 2) {
-	int closest = ((100-n1) < (100-n2)) ? n1 : n2;
-	printf("%d is closest to 100.\n", closest);
+        double closest = (abs(100.0-n1) < abs(100.0-n2)) ? n1 : n2;
+	printf("%g is closest to 100.\n", closest);
     } else {
 	printf("Incorrect data entered.\n");
     }
